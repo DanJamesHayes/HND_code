@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BoothsGarageApp">
+  <ClassDiagramComponents>
+    <Class name="AddLineItemGUI" package="BoothsGarage" visibility="public" xPosition="1686.0" yPosition="659.0">
+      <Fields>
+        <Field name="job_no" type="String" visibility="private"/>
+        <Field name="variousJFrameComponents" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setWorkOrderNumber" returnType="String" visibility="public">
+          <Argument type="String" name="won"/>
+        </Method>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btnAddActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnClearActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCloseActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="BoothsGarage" visibility="public" xPosition="1517.0" yPosition="108.0">
+      <Fields>
+        <Field name="cust_ref" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setRef" returnType="String" visibility="public">
+          <Argument type="String" name="cust_ref"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CustomerGUI" package="BoothsGarage" visibility="public" xPosition="875.0" yPosition="727.0">
+      <Fields>
+        <Field name="variousJFrameComponents" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btnAddCustomerActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnMenuActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnEditCustomerActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSearchActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnClearActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteCustomerActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCreateWorkOrderActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DBmethods" package="BoothsGarage" visibility="public" xPosition="926.0" yPosition="1215.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getDBConnection" returnType="Connection" visibility="public" isStatic="true"/>
+        <Method name="searchFullTable" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="from"/>
+        </Method>
+        <Method name="searchWhere" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="where"/>
+        </Method>
+        <Method name="insertRecord" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="entities"/>
+          <Argument type="String" name="values"/>
+        </Method>
+        <Method name="searchWhereLI" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="where"/>
+        </Method>
+        <Method name="updateStringRecord" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="update"/>
+          <Argument type="String" name="set"/>
+          <Argument type="String" name="where"/>
+        </Method>
+        <Method name="deleteRecord" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="where"/>
+        </Method>
+        <Method name="countWhere" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="from"/>
+          <Argument type="String" name="where"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Items" package="BoothsGarage" visibility="public" xPosition="1561.0" yPosition="369.0">
+      <Fields>
+        <Field name="item_code" type="String" visibility="private" isFinal="true"/>
+        <Field name="item_desc" type="String" visibility="private" isFinal="true"/>
+        <Field name="item_cost_ex_vat" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="item_code"/>
+          <Argument type="String" name="item_desc"/>
+          <Argument type="String" name="item_cost_ex_vat"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ItemsGUI" package="BoothsGarage" visibility="public" xPosition="1300.0" yPosition="659.0">
+      <Fields>
+        <Field name="variousJFrameComponents" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btnMenuActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnEditItemActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddItemActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnShowItemsActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteItemActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnClearActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LineItemsGUI" package="BoothsGarage" visibility="public" xPosition="2085.0" yPosition="659.0">
+      <Fields>
+        <Field name="btnAddItem" type="JButton" visibility="private" isFinal="true"/>
+        <Field name="btnShowCatalogue" type="JButton" visibility="private" isFinal="true"/>
+        <Field name="lineItems" type="JTable" visibility="private" isStatic="true"/>
+        <Field name="tableModel" type="DefaultTableModel" visibility="public" isStatic="true"/>
+        <Field name="job_no" type="String" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="won"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="btnAddItemActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnShowCatalogueActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Line_items" package="BoothsGarage" visibility="public" xPosition="2050.0" yPosition="369.0">
+      <Fields>
+        <Field name="job_number" type="String" visibility="private" isFinal="true"/>
+        <Field name="item_code" type="String" visibility="private" isFinal="true"/>
+        <Field name="quantity" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="job_number"/>
+          <Argument type="String" name="item_code"/>
+          <Argument type="String" name="quantity"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginGUI" package="BoothsGarage" visibility="public" xPosition="2128.0" yPosition="1000.0">
+      <Fields>
+        <Field name="password" type="String" visibility="public" isStatic="true"/>
+        <Field name="username" type="String" visibility="public" isStatic="true"/>
+        <Field name="sr" type="SearchResults" visibility="public" isStatic="true"/>
+        <Field name="ali" type="AddLineItemGUI" visibility="public" isStatic="true"/>
+        <Field name="lig" type="LineItemsGUI" visibility="public" isStatic="true"/>
+        <Field name="variousJFrameComponents" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btnExitActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnClearActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnLoginActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MenuGUI" package="BoothsGarage" visibility="public" xPosition="2085.0" yPosition="1334.0">
+      <Fields>
+        <Field name="variousJFrameComponents" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="QuitActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnLogOutActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCustomersActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnStaffActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnWorkOrdersActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCatalogueActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Person" package="BoothsGarage" visibility="public" isAbstract="true" xPosition="1131.0" yPosition="40.0">
+      <Fields>
+        <Field name="first_name" type="String" visibility="private" isFinal="true"/>
+        <Field name="surname" type="String" visibility="private" isFinal="true"/>
+        <Field name="address" type="String" visibility="private" isFinal="true"/>
+        <Field name="postcode" type="String" visibility="private" isFinal="true"/>
+        <Field name="phone_no" type="String" visibility="private" isFinal="true"/>
+        <Field name="dob" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setRef" returnType="String" visibility="public">
+          <Argument type="String" name="ref"/>
+        </Method>
+        <Method name="setFirst_name" returnType="String" visibility="public">
+          <Argument type="String" name="first_name"/>
+        </Method>
+        <Method name="setSurname" returnType="String" visibility="public">
+          <Argument type="String" name="surname"/>
+        </Method>
+        <Method name="setAddress" returnType="String" visibility="public">
+          <Argument type="String" name="address"/>
+        </Method>
+        <Method name="setPostcode" returnType="String" visibility="public">
+          <Argument type="String" name="postcode"/>
+        </Method>
+        <Method name="setPhone_no" returnType="String" visibility="public">
+          <Argument type="String" name="phone_no"/>
+        </Method>
+        <Method name="setDob" returnType="String" visibility="public">
+          <Argument type="String" name="dob"/>
+        </Method>
+        <Method name="toStringCust" returnType="String" visibility="public"/>
+        <Method name="toStringStaff" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SearchResults" package="BoothsGarage" visibility="public" xPosition="1661.0" yPosition="1249.0">
+      <Fields>
+        <Field name="results" type="JTable" visibility="private" isStatic="true"/>
+        <Field name="tableModel" type="DefaultTableModel" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Staff" package="BoothsGarage" visibility="public" xPosition="803.0" yPosition="92.0">
+      <Fields>
+        <Field name="staff_ref" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setRef" returnType="String" visibility="public">
+          <Argument type="String" name="staff_ref"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="StaffGUI" package="BoothsGarage" visibility="public" xPosition="440.0" yPosition="581.0">
+      <Fields>
+        <Field name="variousJFrameComponents" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btnAddStaffMemberActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnEditStaffMemberActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnMenuActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSearchActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnClearActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteStaffMemberActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="WorkOrder" package="BoothsGarage" visibility="public" xPosition="60.0" yPosition="267.0">
+      <Fields>
+        <Field name="job_no" type="String" visibility="private" isFinal="true"/>
+        <Field name="cust_ref" type="String" visibility="private" isFinal="true"/>
+        <Field name="staff_ref" type="String" visibility="private" isFinal="true"/>
+        <Field name="job_desc" type="String" visibility="private" isFinal="true"/>
+        <Field name="completion_date" type="String" visibility="private" isFinal="true"/>
+        <Field name="garage_name" type="String" visibility="private" isFinal="true"/>
+        <Field name="net_total" type="String" visibility="private" isFinal="true"/>
+        <Field name="vat" type="String" visibility="private" isFinal="true"/>
+        <Field name="total" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="job_no"/>
+          <Argument type="String" name="cust_ref"/>
+          <Argument type="String" name="staff_ref"/>
+          <Argument type="String" name="job_desc"/>
+          <Argument type="String" name="completion_date"/>
+          <Argument type="String" name="garage_name"/>
+          <Argument type="String" name="net_total"/>
+          <Argument type="String" name="vat"/>
+          <Argument type="String" name="total"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="WorkOrderGUI" package="BoothsGarage" visibility="public" xPosition="1.0" yPosition="666.0">
+      <Fields>
+        <Field name="variousJFrameComponents" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btnMenuActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSearchActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddLineItemsActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnShowLineItemsActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnClearActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnAddOrderActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnUpdateOrderActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnDeleteOrderActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnSearchStaffActionPerformed" returnType="ActionEvent" visibility="private">
+          <Argument type="ActionEvent" name="evt"/>
+        </Method>
+        <Method name="updateCostView" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="v"/>
+          <Argument type="String" name="t"/>
+          <Argument type="String" name="job_no"/>
+        </Method>
+        <Method name="setCustRef" returnType="String" visibility="public">
+          <Argument type="String" name="customerRef"/>
+        </Method>
+        <Method name="main" returnType="String" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PersonFactory" package="" visibility="public" xPosition="1100.0" yPosition="437.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getInstance" returnType="Person" visibility="public" isStatic="true">
+          <Argument type="String" name="P"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="BoothsGarage.MenuGUI" target="BoothsGarage.LoginGUI" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.LineItemsGUI" target="BoothsGarage.DBmethods" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.WorkOrderGUI" target="BoothsGarage.DBmethods" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.ItemsGUI" target="BoothsGarage.Items" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sr" source="BoothsGarage.LoginGUI" target="BoothsGarage.SearchResults" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.AddLineItemGUI" target="BoothsGarage.Line_items" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.AddLineItemGUI" target="BoothsGarage.LineItemsGUI" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.ItemsGUI" target="BoothsGarage.DBmethods" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.StaffGUI" target="PersonFactory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.StaffGUI" target="BoothsGarage.DBmethods" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.CustomerGUI" target="PersonFactory" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="BoothsGarage.Customer" target="BoothsGarage.Person"/>
+    <UseRelation name="" source="BoothsGarage.DBmethods" target="BoothsGarage.SearchResults" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="BoothsGarage.Staff" target="BoothsGarage.Person"/>
+    <UseRelation name="" source="BoothsGarage.CustomerGUI" target="BoothsGarage.DBmethods" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="lig" source="BoothsGarage.LoginGUI" target="BoothsGarage.LineItemsGUI" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.WorkOrderGUI" target="BoothsGarage.WorkOrder" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ali" source="BoothsGarage.LoginGUI" target="BoothsGarage.AddLineItemGUI" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="BoothsGarage.AddLineItemGUI" target="BoothsGarage.DBmethods" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="PersonFactory" target="BoothsGarage.Person" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
